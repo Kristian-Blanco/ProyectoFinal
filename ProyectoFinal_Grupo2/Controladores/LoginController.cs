@@ -43,14 +43,14 @@ namespace ProyectoFinal_Grupo2.Controladores
 
             if (esValido)
             {
-                MessageBox.Show("Usuario Correcto");
+                //MessageBox.Show("Usuario Correcto");
 
-                //MenuView menu = new MenuView();
-                //vista.Hide();
+                MenuView menu = new MenuView();
+                vista.Hide();
 
                 //menu.EmailUsuario = user.Email;
 
-                //menu.Show();
+                menu.Show();
 
             }
             else
