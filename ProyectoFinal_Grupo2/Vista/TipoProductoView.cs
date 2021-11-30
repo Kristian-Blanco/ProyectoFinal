@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal_Grupo2.Vista
 {
-    public partial class ProductoView : Form
+    public partial class TipoProductoView : Form
     {
-        public ProductoView()
+        public TipoProductoView()
         {
             InitializeComponent();
         }

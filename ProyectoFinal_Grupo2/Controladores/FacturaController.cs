@@ -14,6 +14,7 @@ namespace ProyectoFinal_Grupo2.Controladores
         public FacturaController(FacturaView view)
         {
             vista = view;
+            
         }
     }
 }
