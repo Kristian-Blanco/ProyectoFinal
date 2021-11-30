@@ -32,7 +32,7 @@ namespace ProyectoFinal_Grupo2.Vista
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.CodigoTextBox = new System.Windows.Forms.TextBox();
+            this.CodigoProductoTextBox = new System.Windows.Forms.TextBox();
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ExistenciaTextBox = new System.Windows.Forms.TextBox();
@@ -79,12 +79,12 @@ namespace ProyectoFinal_Grupo2.Vista
             this.label2.TabIndex = 2;
             this.label2.Text = "Código";
             // 
-            // CodigoTextBox
+            // CodigoProductoTextBox
             // 
-            this.CodigoTextBox.Location = new System.Drawing.Point(127, 81);
-            this.CodigoTextBox.Name = "CodigoTextBox";
-            this.CodigoTextBox.Size = new System.Drawing.Size(170, 20);
-            this.CodigoTextBox.TabIndex = 3;
+            this.CodigoProductoTextBox.Location = new System.Drawing.Point(127, 81);
+            this.CodigoProductoTextBox.Name = "CodigoProductoTextBox";
+            this.CodigoProductoTextBox.Size = new System.Drawing.Size(170, 20);
+            this.CodigoProductoTextBox.TabIndex = 3;
             // 
             // DescripcionTextBox
             // 
@@ -247,7 +247,7 @@ namespace ProyectoFinal_Grupo2.Vista
             this.Controls.Add(this.label4);
             this.Controls.Add(this.DescripcionTextBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.CodigoTextBox);
+            this.Controls.Add(this.CodigoProductoTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -265,7 +265,7 @@ namespace ProyectoFinal_Grupo2.Vista
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox CodigoTextBox;
+        private System.Windows.Forms.TextBox CodigoProductoTextBox;
         private System.Windows.Forms.TextBox DescripcionTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox ExistenciaTextBox;
