@@ -56,7 +56,41 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
             }
             return dt;
         }
+        
+        public Producto GetProductoPorCodigo(string codigo)
+        {
+            Producto producto = new Producto();
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append(" SELECT * FROM PRODUCTO ");
+                sql.Append(" WHERE CODIGO = @Codigo; ");
 
+                comando.Connection = MiConexion;
+                MiConexion.Open();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = sql.ToString();
+                comando.Parameters.Add("@Codigo", SqlDbType.NVarChar, 50).Value = codigo;
+                SqlDataReader dr = comando.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    producto.Id = (int)dr["ID"];
+                    producto.Codigo = (string)dr["CODIGO"];
+                    producto.Descripcion = (string)dr["DESCRIPCION"];
+                    producto.Existencia = (int)dr["EXISTENCIA"];
+                    producto.Precio = (decimal)dr["PRECIO"];
+                }
+
+                MiConexion.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MiConexion.Close();
+            }
+            return producto;
+        }
 
     }
 }
