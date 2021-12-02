@@ -29,6 +29,7 @@ namespace ProyectoFinal_Grupo2.Vista
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Usuariolabel3 = new System.Windows.Forms.Label();
@@ -120,19 +121,43 @@ namespace ProyectoFinal_Grupo2.Vista
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 3;
+=======
+            this.components = new System.ComponentModel.Container();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+>>>>>>> 3317fd36471ab14a60d0d188a0ed00687403e03e
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(24, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Identidad:";
+=======
+            this.label1.Location = new System.Drawing.Point(108, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+>>>>>>> 3317fd36471ab14a60d0d188a0ed00687403e03e
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(302, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
@@ -370,11 +395,37 @@ namespace ProyectoFinal_Grupo2.Vista
             this.groupBox5.Size = new System.Drawing.Size(768, 63);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
+=======
+            this.label2.Location = new System.Drawing.Point(381, 133);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(306, 233);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "label3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(168, 86);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "label4";
+>>>>>>> 3317fd36471ab14a60d0d188a0ed00687403e03e
             // 
             // FacturaView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(834, 587);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox3);
@@ -382,6 +433,13 @@ namespace ProyectoFinal_Grupo2.Vista
             this.Controls.Add(this.DetalleDataGridView);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
+=======
+            this.ClientSize = new System.Drawing.Size(507, 328);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+>>>>>>> 3317fd36471ab14a60d0d188a0ed00687403e03e
             this.Name = "FacturaView";
             this.Text = "Factura";
             this.groupBox2.ResumeLayout(false);
@@ -395,11 +453,13 @@ namespace ProyectoFinal_Grupo2.Vista
             this.groupBox3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
+<<<<<<< HEAD
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label Labellabel4;
@@ -433,5 +493,12 @@ namespace ProyectoFinal_Grupo2.Vista
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.DataGridView DetalleDataGridView;
         private System.Windows.Forms.GroupBox groupBox5;
+=======
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+>>>>>>> 3317fd36471ab14a60d0d188a0ed00687403e03e
     }
 }
