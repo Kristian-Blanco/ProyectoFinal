@@ -127,27 +127,27 @@
   <data name="ClienteToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASNSURBVFhH3ZdrbBRVFMd33jM70+6LvqDbQl8LS59YiEvf
-        LQWJtJbaDypUsbQ1EomJ8siCj4aChFj4gGJMTAqplQRQ04QYP+gH09hQEz+YGDUK4asmipbSpRK6Pd5z
-        d2czs70tja6J8Z/8snfuPef8z97Zu7Pr+D8pXRb515yCcF3guXuIUxF+InOvkrW0WMi/p02KKNyqK3Lf
-        PdH+EFzsaaTguLbQFZFF4TcSszEWmnoFiPl0+JEK+Ki/hUl4WwVgDIktiaWkUE6Z/6q7JhBlGVt5KlQc
-        JbHX4mkp01pdkWau9DXbzIY6N0HXhgLI9aVDTfFKuNTbBJd7m8FQxAjJSeku9NcXuSPJpvnZXnj56TaY
-        GDkJj9ZWQagohzYQKsieITm9sdTU6JU8rzHvMTTI8bnhwDPtMPnBKZj9+lKC6cmL0FS9Hty6Cn6PPo85
-        sdTUaCA/ywfdbY1wtL/LZmwF13bvaIC8LC9gTiw1NRro7WyBQz07qcn5wf1w4fj+hLF5jWsY09PRnPoG
-        8F3hDhx8tsP2rq3gGu5AboYn9Q2s9hn0/m4NlTPNkdaHy8BFYjAWc2Kp/1DkK/aAJPB39m4ugZE9DdRg
-        /MKJBeZfDA/StfdJDMZiDubGy/xtNTid8p1zT2xOnP2DrWXgMZzw9pE+uPnpu5S3wn107tDW8kQc5mAu
-        qVEXK8WQJIk/kxcQRQHPbTadtOvI9mD+nFnU5I3HqnGLIU3XKDg+2VFti0EwF2tgIaZ0Vflm+NgL8OKu
-        HX+SSxB4fs6t65NknEcDHI6j24J5CxpAyBrc+nKEgmNWTLyBMBZiqZYwnesyItc/eQe+GzsLhf5sqK1a
-        N++KNYFqNDQ58lJLKRRm6cBzDmpmgnmIdQ4RBQ4q89zg1OgtCBGYws5O6ZpyXJGlGV1T7/c93gqHezpB
-        kcR7ZM2DQZLADZJnfvRyeA3MfFwBs2OVlNd3+UFTRMrAbn9iHrn9YQUMdOVENZX/AWssJjwmiaNCPsFX
-        c8j5xS+TtlD1DM/z+3DeqXCn92xxzVoNlsPUlQrcifu0+CKyNUC0nUAbGDsbBlea9j25XqHK/N0f3wsy
-        TR4E1sPCNok8PZu2e7YUhsLPm1u/JkteYJKMNSZewy6XKIyeXlsCvzY3LMpQoAR2rvDBtapyyHBKcHN4
-        faKgWXwxrDE4Rk+bvJI0PlpeyjQ2wfU6l4s2EPRoMDFUApNnAqlpwC0INz7buIFpbILrQd1JG6jPTIdz
-        +/xgGPRXjs2MhTUGx+hpkyrwU9/WhJjGJrieIUm0gQ7yq0cWuaiucMdIus2MBcYkYZMgcNzcL031TGMT
-        XJc4DiYqy2Bvdua8pnKfk1yOwDS1QmPiDygcE2xaZYhihGWaTKYswdXSdXDYvwoMQRiN5zNNrdCYJRqo
-        LlKUP1iGyZQZBgwHiuHNgtWQzvPj8XymqRUas0QD7TUedYplmMwWn5eanydNkL9hN+L5TFMrNGaJBp57
-        0uNe1i3oXplDtx9vg8rzU/F8pqkVGrNEA88TzIVlQz6Qv5NXfDDdts4/CFWmR/e/IIfjL8DAtx6dTxzM
-        AAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASOSURBVFhH3ZdrbBRVFMd33js7033Sx0K3hb4WStttsRCX
+        vltaMdJaCh8kFMXS1kgkJsojCz4aChJi4QOKMTEppFYSQE0TYvygH0xjQ038YGLUKISvmihaSpdKaHu8
+        5+7OZmZ7uzS6JsZ/8sveufec8z97Z+/Oru3/JKcs8q85BOGGwHP3EYci/ETmXiVrGbGQf0+bFFG4XVfk
+        uney4xG41NNIwXFtoTMqi8JvJGZjLDT9ChLz6cjWEHzU38Ik8lgIMIbElsRS0iiHzH/VXROcZxmb2RUu
+        niex1+NpadNaTZFmrvY1W8yGujbBzg0FkOtzQk3xSrjc2wRXeptBV8QoyUnrLvTXF7miyab5OV54+el2
+        mBg5BU/UVkG4yE8bCBfkzJCc3lhqevRKnldf8Ogq+H1uOPhMB0x+cBpmv76cYHryEjRVrwe3ZoeAR1vA
+        nFhqejSQn+2DPe2NcKx/p8XYDK51b2uAvGwvYE4sNT0a6O1qgcM926nJhcEDcPHEgYSxcY1rGNPT2Zz+
+        BvBd4Q4cerbT8q7N4BruQG6mJ/0NrPbp9P62hSuY5kjro+XgIjEYizmx1H8o8hV7UBL4u/s2l8DI3gZq
+        MH7x5CLzL4YH6dr7JAZjMQdz42X+thocDvnu+ac2J87+odZy8OgOePtoH9z69F3KW5E+One4rSIRhzmY
+        S2rUxUoxJEniz+QFRFHAc5tDJ606urU0f84oavDGk9W4xZChqRQcn+qstsQgmIs1sBBTml35Zvj4C/Di
+        7m1/kksQeH7OrWmTZJxHA2y2Y22leYsaQMga3P5yhIJjVky8gQgWYqmWMJ3r1KM3PnkHvhs7B4WBHKit
+        WrfgijWBatRVOfpSSxkUZmvAczZqZoB5iHkOEQUOKvPc4FDpLQgTmMLOTmuqckKRpRlNtT/o29EKR3q6
+        QJHE+2TNg0GSwA2SZ/78lcgamPk4BLNjlZTXdwdAVUTKQHcgMY/c+TAEAzv886qd/wFrLCU8JomjQj7B
+        1/zk/OKXSXu4eobn+f0471C4M3u3uGbNBsth6moId+IBLb6ELA0QPU6gDYydi4ArQ/2eXK+wy/y9H98r
+        ZZo8DKyHhS0SeXo2LfcsFbrCLxhbvyZbXmSSjDkmXsMqlyiMnllbAr82NyzJULAEtq/wwfWqCsh0SHBr
+        eH2ioFF8KcwxOEZPi7ySND5aUcY0NsD1OpeLNlDqUWFiqAQmzwbT04BbEG5+tnED09gA10s1B22gPssJ
+        5/cHQNfprxyLGQtzDI7R0yK7wE99WxNmGhvgeqYk0QY6ya8eWeTmNYU7TtItZiwwJgmLBIHj5n5pqmca
+        G+C6xHEwUVkO+3KyFlQ79znJ5QhMUzM0Jv6AwjHBolW6KEZZpslkyRJcK1sHRwKrQBeE0Xg+09QMjUnR
+        QHWRovzBMkymXNdhOFgMbxasBifPj8fzmaZmaEyKBjpqPPYplmEyW3xean6BNEH+ht2M5zNNzdCYFA08
+        t8vtWtYt2LPST7cfb4Od56fi+UxTMzQmRQPPE4yFZUM+kL+TV3ww3THPPwy7TI/uf0E2219G57cRAMcS
+        rwAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="ProductoToolStripTabItem.TabGroup" type="System.Resources.ResXNullRef, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

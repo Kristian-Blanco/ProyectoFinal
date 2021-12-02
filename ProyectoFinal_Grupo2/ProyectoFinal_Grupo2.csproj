@@ -57,6 +57,7 @@
     <Compile Include="Controladores\ProductoController.cs" />
     <Compile Include="Modelos\DAO\ClienteDAO.cs" />
     <Compile Include="Modelos\DAO\Conexion.cs" />
+    <Compile Include="Modelos\DAO\Factura DAO.cs" />
     <Compile Include="Modelos\DAO\UsuarioDAO.cs" />
     <Compile Include="Modelos\Entidades\Cliente.cs" />
     <Compile Include="Modelos\Entidades\Factura.cs" />
