@@ -18,5 +18,10 @@ namespace ProyectoFinal_Grupo2.Vista
             InitializeComponent();
             FacturaController controlador = new FacturaController(this);
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
