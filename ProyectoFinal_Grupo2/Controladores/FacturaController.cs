@@ -14,60 +14,63 @@ namespace ProyectoFinal_Grupo2.Controladores
     public class FacturaController
     {
         FacturaView vista;
+        FacturaDAO facturaDAO = new FacturaDAO();
+        Factura factura = new Factura();
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        Cliente cliente = new Cliente();
+        ClienteDAO clienteDAO = new ClienteDAO();
         Producto producto = new Producto();
         ProductoDAO productoDAO = new ProductoDAO();
+        public string _EmailUsuario;
+        Usuario user = new Usuario();
+
+
+        decimal subTotal = 0;
+        decimal isv = 0;
+        decimal totalPagar = 0;
 
         public FacturaController(FacturaView view)
         {
             vista = view;
-            vista.CodigoProductoTextBox_KeyPress;
+            vista.Load += new EventHandler(Load);
+            vista.IdentidadmaskedTextBox.KeyPress += IdentidadmaskedTextBox_KeyPress;
+            vista.BuscarClienteButton.Click += BuscarClienteButton_Click;
         }
-        private void CodigoProductoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void BuscarClienteButton_Click(object sender, EventArgs e)
+        {
+            BuscarClienteView form = new BuscarClienteView();
+            form.ShowDialog();
+            cliente = form._cliente;
+           vista.IdentidadMaskedTextBox.Text = cliente.Identidad;
+           vista.NombreTextBox.Text = cliente.Nombre;
+        }
+
+        private void IdentidadmaskedTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                producto = productoDAO.GetProductoPorCodigo(vista.CodigoProductoTextBox.Text);
+                cliente = clienteDAO.GetClientePorIdentidad(vista.IdentidadMaskedTextBox);
 
-                vista.DescripcionProductoTextBox.Text = producto.Descripcion;
+                vista.NombreTextBox.Text = cliente.Nombre;
             }
             else
             {
-                producto = null;
-                vista.DescripcionProductoTextBox.Clear();
+                cliente = null;
+                vista.NombreTextBox.Clear();
             }
         }
 
-
-    }
-}
-
-public class FacturaController
-{
-    FacturaView vista;
-    Producto producto = new Producto();
-    ProductoDAO productoDAO = new ProductoDAO();
-
-    public FacturaController(FacturaView view)
-    {
-        vista = view;
-        vista.CodigoProductoTextBox_KeyPress;
-    }
-    private void CodigoProductoTextBox_KeyPress(object sender, KeyPressEventArgs e)
-    {
-        if (e.KeyChar == (char)Keys.Enter)
+        private void Load(object sender, EventArgs e)
         {
-            producto = productoDAO.GetProductoPorCodigo(vista.CodigoProductoTextBox.Text);
+            user = usuarioDAO.GetUsuarioPorEmail(System.Threading.Thread.CurrentPrincipal.Identity.Name);
+            vista.UsuarioTextBox= user.Nombre;
+        }
 
-            vista.DescripcionProductoTextBox.Text = producto.Descripcion;
-        }
-        else
-        {
-            producto = null;
-            vista.DescripcionProductoTextBox.Clear();
-        }
     }
 
+}
 
-}
-}
+
+
 

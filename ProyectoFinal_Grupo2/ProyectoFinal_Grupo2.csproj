@@ -51,10 +51,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\BuscarClienteView.cs" />
     <Compile Include="Controladores\ClienteController.cs" />
     <Compile Include="Controladores\FacturaController.cs" />
+    <Compile Include="Controladores\FacturaDAO.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Controladores\ProductoController.cs" />
+    <Compile Include="Controladores\ProductoDAO.cs" />
     <Compile Include="Modelos\DAO\ClienteDAO.cs" />
     <Compile Include="Modelos\DAO\Conexion.cs" />
     <Compile Include="Modelos\DAO\Factura DAO.cs" />

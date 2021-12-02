@@ -36,5 +36,9 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
             return valido;
         }
 
+        internal Usuario GetUsuarioPorEmail(string name)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
