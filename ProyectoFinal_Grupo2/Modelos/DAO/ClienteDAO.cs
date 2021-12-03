@@ -53,18 +53,23 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
             return inserto;
         }
 
+        internal object GetClientes()
+        {
+            throw new NotImplementedException();
+        }
+
         internal Cliente GetClientePorIdentidad(object text)
         {
             throw new NotImplementedException();
         }
 
-        public DataTable GetClientes()
+        public DataTable GetClientesPorNombre(string nombre)
         {
             DataTable dt = new DataTable();
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" SELECT * FROM CLIENTE ");
+                sql.Append(" SELECT * FROM CLIENTE WHERE NOMBRE LIKE (' % " + nombre + "%')");
 
                 comando.Connection = MiConexion;
                 MiConexion.Open();

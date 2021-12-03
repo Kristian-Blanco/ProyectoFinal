@@ -16,7 +16,7 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
 
         
 
-        public bool InsertarNuevaFactura(Factura factura)
+        public bool InsertarNuevaFactura(Factura factura, List<DetalleFacturaDAO> detalleFactura)
         {
             bool inserto = false;
             MiConexion.Close();
@@ -32,7 +32,11 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
                 sql.Append(" VALUES (@Fecha, @IdCliente, @SubTotal, @ISV, @Descuento, @Total, @IdUsuario); ");
                 sql.Append(" SELECT SCOPE_IDENTITY() ");
 
-              
+                StringBuilder sqlD = new StringBuilder();
+                sqlD.Append(" INSERT INTO DETALLEFACTURA ");
+                sqlD.Append(" VALUES (@IdFactura, @IdProducto, @Cantidad, @Precio, @TotalDetalle); ");
+
+
                 comando.Transaction = transaction;
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = sql.ToString();
@@ -46,7 +50,18 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
 
                 int IdFactura = Convert.ToInt32(comando.ExecuteScalar());
 
-               
+                foreach (var item in detalleFactura) 
+                {
+                    comando.Transaction = transaction;
+                    comando.CommandType = System.Data.CommandType.Text;
+                    comando.CommandText = sqlD.ToString();
+                    comando.Parameters.Add("@IdFactura", SqlDbType.Int).Value = IdFactura;
+                    comando.Parameters.Add("@IdProducto", SqlDbType.Int).Value = item.IdProducto;
+                    comando.Parameters.Add("@Cantidad", SqlDbType.Int).Value = item.Cantidad;
+                    comando.Parameters.Add("@Precio", SqlDbType.Decimal).Value = item.Precio;
+                    comando.Parameters.Add("@TotalDetalle", SqlDbType.Decimal).Value = item.Total;
+                    comando.ExecuteNonQuery();
+                }
                 transaction.Commit();
                 MiConexion.Close();
             }
@@ -56,6 +71,11 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
                 transaction.Rollback();
             }
             return inserto;
+        }
+
+        internal bool InsertarNuevaFactura(Factura factura, List<DetalleFactura> listadetalleFactura)
+        {
+            throw new NotImplementedException();
         }
     }
 }

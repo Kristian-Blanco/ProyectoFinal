@@ -58,16 +58,24 @@
     <Compile Include="Controladores\ProductoController.cs" />
     <Compile Include="Modelos\DAO\ClienteDAO.cs" />
     <Compile Include="Modelos\DAO\Conexion.cs" />
+    <Compile Include="Modelos\DAO\DetalleFacturaDAO.cs" />
     <Compile Include="Modelos\DAO\FacturaDAO.cs" />
     <Compile Include="Modelos\DAO\ProductoDAO.cs" />
     <Compile Include="Modelos\DAO\UsuarioDAO.cs" />
     <Compile Include="Modelos\Entidades\Cliente.cs" />
+    <Compile Include="Modelos\Entidades\DetalleFactura.cs" />
     <Compile Include="Modelos\Entidades\Factura.cs" />
     <Compile Include="Modelos\Entidades\Producto.cs" />
     <Compile Include="Modelos\Entidades\TipoProducto.cs" />
     <Compile Include="Modelos\Entidades\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\BuscarClienteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\BuscarClienteView.Designer.cs">
+      <DependentUpon>BuscarClienteView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\ClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +122,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vista\BuscarClienteView.resx">
+      <DependentUpon>BuscarClienteView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\ClienteView.resx">
       <DependentUpon>ClienteView.cs</DependentUpon>
     </EmbeddedResource>
