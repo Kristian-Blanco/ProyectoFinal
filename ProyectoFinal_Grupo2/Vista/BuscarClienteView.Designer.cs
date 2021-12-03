@@ -1,5 +1,4 @@
-﻿
-namespace ProyectoFinal_Grupo2.Vista
+﻿namespace ProyectoFinal_Grupo2.Vista
 {
     partial class BuscarClienteView
     {
@@ -29,71 +28,73 @@ namespace ProyectoFinal_Grupo2.Vista
         /// </summary>
         private void InitializeComponent()
         {
-            this.NombreClientelabel = new System.Windows.Forms.Label();
-            this.NombreClientetextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NombreClienteTextBox = new System.Windows.Forms.TextBox();
             this.Aceptarbutton = new System.Windows.Forms.Button();
             this.Cancelarbutton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.ClientedataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientedataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // NombreClientelabel
+            // label1
             // 
-            this.NombreClientelabel.AutoSize = true;
-            this.NombreClientelabel.Location = new System.Drawing.Point(137, 90);
-            this.NombreClientelabel.Name = "NombreClientelabel";
-            this.NombreClientelabel.Size = new System.Drawing.Size(82, 13);
-            this.NombreClientelabel.TabIndex = 0;
-            this.NombreClientelabel.Text = "Nombre Cliente:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(77, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nombre Cliente";
             // 
-            // NombreClientetextBox
+            // NombreClienteTextBox
             // 
-            this.NombreClientetextBox.Location = new System.Drawing.Point(312, 90);
-            this.NombreClientetextBox.Name = "NombreClientetextBox";
-            this.NombreClientetextBox.Size = new System.Drawing.Size(100, 20);
-            this.NombreClientetextBox.TabIndex = 1;
+            this.NombreClienteTextBox.Location = new System.Drawing.Point(199, 70);
+            this.NombreClienteTextBox.Name = "NombreClienteTextBox";
+            this.NombreClienteTextBox.Size = new System.Drawing.Size(282, 20);
+            this.NombreClienteTextBox.TabIndex = 1;
+            this.NombreClienteTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NombreClienteTextBox_KeyUp);
             // 
             // Aceptarbutton
             // 
-            this.Aceptarbutton.Location = new System.Drawing.Point(156, 171);
+            this.Aceptarbutton.Location = new System.Drawing.Point(111, 152);
             this.Aceptarbutton.Name = "Aceptarbutton";
             this.Aceptarbutton.Size = new System.Drawing.Size(75, 23);
             this.Aceptarbutton.TabIndex = 2;
-            this.Aceptarbutton.Text = "Aceptar ";
+            this.Aceptarbutton.Text = "Aceptar";
             this.Aceptarbutton.UseVisualStyleBackColor = true;
-            
+            this.Aceptarbutton.Click += new System.EventHandler(this.Aceptarbutton_Click);
             // 
             // Cancelarbutton
             // 
-            this.Cancelarbutton.Location = new System.Drawing.Point(351, 171);
+            this.Cancelarbutton.Location = new System.Drawing.Point(266, 152);
             this.Cancelarbutton.Name = "Cancelarbutton";
             this.Cancelarbutton.Size = new System.Drawing.Size(75, 23);
             this.Cancelarbutton.TabIndex = 3;
             this.Cancelarbutton.Text = "Cancelar";
             this.Cancelarbutton.UseVisualStyleBackColor = true;
+            this.Cancelarbutton.Click += new System.EventHandler(this.Cancelarbutton_Click);
             // 
-            // dataGridView1
+            // ClientedataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-3, 211);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(744, 125);
-            this.dataGridView1.TabIndex = 4;
-            
+            this.ClientedataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ClientedataGridView.Location = new System.Drawing.Point(3, 190);
+            this.ClientedataGridView.Name = "ClientedataGridView";
+            this.ClientedataGridView.Size = new System.Drawing.Size(797, 150);
+            this.ClientedataGridView.TabIndex = 4;
             // 
             // BuscarClienteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 337);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(800, 344);
+            this.Controls.Add(this.ClientedataGridView);
             this.Controls.Add(this.Cancelarbutton);
             this.Controls.Add(this.Aceptarbutton);
-            this.Controls.Add(this.NombreClientetextBox);
-            this.Controls.Add(this.NombreClientelabel);
+            this.Controls.Add(this.NombreClienteTextBox);
+            this.Controls.Add(this.label1);
             this.Name = "BuscarClienteView";
             this.Text = "BuscarClienteView";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.BuscarClienteView_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ClientedataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,10 +102,10 @@ namespace ProyectoFinal_Grupo2.Vista
 
         #endregion
 
-        private System.Windows.Forms.Label NombreClientelabel;
-        private System.Windows.Forms.TextBox NombreClientetextBox;
-        private System.Windows.Forms.Button Aceptarbutton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox NombreClienteTextBox;
+        public System.Windows.Forms.Button Aceptarbutton;
         private System.Windows.Forms.Button Cancelarbutton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ClientedataGridView;
     }
 }
