@@ -21,6 +21,7 @@ namespace ProyectoFinal_Grupo2.Controladores
 
             vista.Aceptarbutton.Click += new EventHandler(ValidarUsuario);
             vista.Cancelarbutton.Click += new EventHandler(Cerrar);
+           
         }
 
         private void Cerrar(object serder, EventArgs e)
@@ -41,13 +42,16 @@ namespace ProyectoFinal_Grupo2.Controladores
 
             esValido = userDao.ValidarUsuario(user);
 
+
             if (esValido)
             {
                 //MessageBox.Show("Usuario Correcto");
 
                 MenuView menu = new MenuView();
                 vista.Hide();
-
+                System.Security.Principal.GenericIdentity identidad = new System.Security.Principal.GenericIdentity(vista.EmailTextbox.Text);
+                System.Security.Principal.GenericPrincipal principal = new System.Security.Principal.GenericPrincipal(identidad, null);
+                System.Threading.Thread.CurrentPrincipal = principal;
                 //menu.EmailUsuario = user.Email;
 
                 menu.Show();

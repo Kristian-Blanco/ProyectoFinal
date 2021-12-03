@@ -52,7 +52,12 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
             }
             return inserto;
         }
-       
+
+        internal Cliente GetClientePorIdentidad(object text)
+        {
+            throw new NotImplementedException();
+        }
+
         public DataTable GetClientes()
         {
             DataTable dt = new DataTable();

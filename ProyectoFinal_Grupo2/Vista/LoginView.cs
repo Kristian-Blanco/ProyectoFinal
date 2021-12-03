@@ -13,11 +13,14 @@ namespace ProyectoFinal_Grupo2.Vista
 {
     public partial class LoginView : Form
     {
+        internal object EmailextBox;
+
         public LoginView()
         {
             InitializeComponent();
             LoginController controlador = new LoginController(this);
         }
 
+        public object EmailtextBox { get; internal set; }
     }
 }

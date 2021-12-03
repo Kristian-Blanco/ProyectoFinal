@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ProyectoFinal_Grupo2</RootNamespace>
     <AssemblyName>ProyectoFinal_Grupo2</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -50,12 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\BuscarClienteView.cs" />
     <Compile Include="Controladores\ClienteController.cs" />
     <Compile Include="Controladores\FacturaController.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Controladores\ProductoController.cs" />
     <Compile Include="Modelos\DAO\ClienteDAO.cs" />
     <Compile Include="Modelos\DAO\Conexion.cs" />
+    <Compile Include="Modelos\DAO\FacturaDAO.cs" />
+    <Compile Include="Modelos\DAO\ProductoDAO.cs" />
     <Compile Include="Modelos\DAO\UsuarioDAO.cs" />
     <Compile Include="Modelos\Entidades\Cliente.cs" />
     <Compile Include="Modelos\Entidades\Factura.cs" />

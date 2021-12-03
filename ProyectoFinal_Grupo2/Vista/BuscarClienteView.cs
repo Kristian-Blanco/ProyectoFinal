@@ -1,5 +1,4 @@
-﻿using ProyectoFinal_Grupo2.Controladores;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,16 +10,13 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal_Grupo2.Vista
 {
-    public partial class FacturaView : Form
+    public partial class BuscarClienteView : Form
     {
-       
-        public FacturaView()
+        public BuscarClienteView()
         {
             InitializeComponent();
-            string usuario = EmailUsuario;
-            FacturaController controlador = new FacturaController(this);
         }
-        public string EmailUsuario;
+
         
     }
 }
