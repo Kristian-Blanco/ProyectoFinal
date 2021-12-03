@@ -14,7 +14,7 @@ namespace ProyectoFinal_Grupo2.Controladores
     public class FacturaController
     {
         FacturaView vista;
-        FacturaDAO facturaDAO = new FacturaDAO();
+        Factura_DAO factura_DAO = new Factura_DAO();
         Factura factura = new Factura();
         UsuarioDAO usuarioDAO = new UsuarioDAO();
         Cliente cliente = new Cliente();
@@ -32,28 +32,22 @@ namespace ProyectoFinal_Grupo2.Controladores
         public FacturaController(FacturaView view)
         {
             vista = view;
-            vista.Load += new EventHandler(Load);
+            
+             vista.Load += new EventHandler(Load);
             vista.IdentidadmaskedTextBox.KeyPress += IdentidadmaskedTextBox_KeyPress;
-            vista.BuscarClienteButton.Click += BuscarClienteButton_Click;
-        }
 
-        private void BuscarClienteButton_Click(object sender, EventArgs e)
-        {
-            BuscarClienteView form = new BuscarClienteView();
-            form.ShowDialog();
-            cliente = form._cliente;
-           vista.IdentidadMaskedTextBox.Text = cliente.Identidad;
-           vista.NombreTextBox.Text = cliente.Nombre;
+
+
         }
 
         private void IdentidadmaskedTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar == (Char)Keys.Enter);
             {
-                cliente = clienteDAO.GetClientePorIdentidad(vista.IdentidadMaskedTextBox);
-
+                cliente = clienteDAO.GetClientePorIdentidad(vista.IdentidadmaskedTextBox.Text);
                 vista.NombreTextBox.Text = cliente.Nombre;
             }
+
             else
             {
                 cliente = null;
@@ -64,12 +58,27 @@ namespace ProyectoFinal_Grupo2.Controladores
         private void Load(object sender, EventArgs e)
         {
             user = usuarioDAO.GetUsuarioPorEmail(System.Threading.Thread.CurrentPrincipal.Identity.Name);
-            vista.UsuarioTextBox= user.Nombre;
+            vista.UsuariotextBox.Text = user.Nombre;
         }
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
-
 }
+        
+
 
 
 

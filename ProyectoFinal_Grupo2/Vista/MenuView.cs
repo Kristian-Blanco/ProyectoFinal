@@ -18,6 +18,9 @@ namespace ProyectoFinal_Grupo2.Vista
         ClienteView vistaCliente;
         ProductoView vistaProducto;
         FacturaView vistaFactura;
+
+        public string EmailUsuario { get; internal set; }
+
         private void ClienteToolStripButton_Click(object sender, EventArgs e)
         {
             if (vistaCliente == null)
@@ -48,6 +51,7 @@ namespace ProyectoFinal_Grupo2.Vista
                 vistaFactura = new FacturaView();
                 vistaFactura.MdiParent = this;
                 vistaFactura.FormClosed += Vista_FormClosed2;
+                vistaFactura.EmailUsuario = EmailUsuario;
                 vistaFactura.Show();
             }
         }

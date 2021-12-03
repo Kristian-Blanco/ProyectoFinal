@@ -54,13 +54,12 @@
     <Compile Include="Controladores\BuscarClienteView.cs" />
     <Compile Include="Controladores\ClienteController.cs" />
     <Compile Include="Controladores\FacturaController.cs" />
-    <Compile Include="Controladores\FacturaDAO.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Controladores\ProductoController.cs" />
-    <Compile Include="Controladores\ProductoDAO.cs" />
     <Compile Include="Modelos\DAO\ClienteDAO.cs" />
     <Compile Include="Modelos\DAO\Conexion.cs" />
-    <Compile Include="Modelos\DAO\Factura DAO.cs" />
+    <Compile Include="Modelos\DAO\FacturaDAO.cs" />
+    <Compile Include="Modelos\DAO\ProductoDAO.cs" />
     <Compile Include="Modelos\DAO\UsuarioDAO.cs" />
     <Compile Include="Modelos\Entidades\Cliente.cs" />
     <Compile Include="Modelos\Entidades\Factura.cs" />

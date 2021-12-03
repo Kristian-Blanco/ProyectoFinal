@@ -76,7 +76,7 @@ namespace ProyectoFinal_Grupo2.Vista
             this.ribbonControlAdv1.QuickPanelVisible = false;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.ClienteToolStripTabItem;
+            this.ribbonControlAdv1.SelectedTab = this.FacturaToolStripTabItem;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(785, 138);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
