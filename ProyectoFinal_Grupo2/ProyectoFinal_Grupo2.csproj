@@ -60,6 +60,7 @@
     <Compile Include="Modelos\Entidades\Cliente.cs" />
     <Compile Include="Modelos\Entidades\Factura.cs" />
     <Compile Include="Modelos\Entidades\Producto.cs" />
+    <Compile Include="Modelos\Entidades\TipoProducto.cs" />
     <Compile Include="Modelos\Entidades\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,6 +94,12 @@
     <Compile Include="Vista\ProductoView.Designer.cs">
       <DependentUpon>ProductoView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\TipoProductoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\TipoProductoView.Designer.cs">
+      <DependentUpon>TipoProductoView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -117,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ProductoView.resx">
       <DependentUpon>ProductoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\TipoProductoView.resx">
+      <DependentUpon>TipoProductoView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
