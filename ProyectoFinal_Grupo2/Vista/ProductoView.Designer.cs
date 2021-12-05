@@ -30,7 +30,7 @@ namespace ProyectoFinal_Grupo2.Vista
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.IsTextBox = new System.Windows.Forms.TextBox();
+            this.IdTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.CodigoProductoTextBox = new System.Windows.Forms.TextBox();
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
@@ -39,18 +39,16 @@ namespace ProyectoFinal_Grupo2.Vista
             this.label4 = new System.Windows.Forms.Label();
             this.PrecioTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TipoProductoComboBox = new System.Windows.Forms.ComboBox();
-            this.BuscarButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ProductoPictureBox = new System.Windows.Forms.PictureBox();
+            this.ImagenButton = new System.Windows.Forms.Button();
+            this.ProductosDataGridView = new System.Windows.Forms.DataGridView();
+            this.ImagenPictureBox = new System.Windows.Forms.PictureBox();
             this.CancelarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.ModificarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -62,13 +60,13 @@ namespace ProyectoFinal_Grupo2.Vista
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
             // 
-            // IsTextBox
+            // IdTextBox
             // 
-            this.IsTextBox.Location = new System.Drawing.Point(127, 38);
-            this.IsTextBox.Name = "IsTextBox";
-            this.IsTextBox.ReadOnly = true;
-            this.IsTextBox.Size = new System.Drawing.Size(126, 20);
-            this.IsTextBox.TabIndex = 1;
+            this.IdTextBox.Location = new System.Drawing.Point(127, 38);
+            this.IdTextBox.Name = "IdTextBox";
+            this.IdTextBox.ReadOnly = true;
+            this.IdTextBox.Size = new System.Drawing.Size(126, 20);
+            this.IdTextBox.TabIndex = 1;
             // 
             // label2
             // 
@@ -134,47 +132,30 @@ namespace ProyectoFinal_Grupo2.Vista
             this.label5.TabIndex = 8;
             this.label5.Text = "Precio";
             // 
-            // label6
+            // ImagenButton
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(49, 238);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Tipo Producto";
+            this.ImagenButton.Location = new System.Drawing.Point(578, 227);
+            this.ImagenButton.Name = "ImagenButton";
+            this.ImagenButton.Size = new System.Drawing.Size(102, 35);
+            this.ImagenButton.TabIndex = 13;
+            this.ImagenButton.Text = "Buscar Imagen...";
+            this.ImagenButton.UseVisualStyleBackColor = true;
             // 
-            // TipoProductoComboBox
+            // ProductosDataGridView
             // 
-            this.TipoProductoComboBox.FormattingEnabled = true;
-            this.TipoProductoComboBox.Location = new System.Drawing.Point(127, 235);
-            this.TipoProductoComboBox.Name = "TipoProductoComboBox";
-            this.TipoProductoComboBox.Size = new System.Drawing.Size(170, 21);
-            this.TipoProductoComboBox.TabIndex = 11;
+            this.ProductosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductosDataGridView.Location = new System.Drawing.Point(0, 362);
+            this.ProductosDataGridView.Name = "ProductosDataGridView";
+            this.ProductosDataGridView.Size = new System.Drawing.Size(768, 137);
+            this.ProductosDataGridView.TabIndex = 14;
             // 
-            // BuscarButton
+            // ImagenPictureBox
             // 
-            this.BuscarButton.Location = new System.Drawing.Point(578, 227);
-            this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(102, 35);
-            this.BuscarButton.TabIndex = 13;
-            this.BuscarButton.Text = "Buscar Imagen...";
-            this.BuscarButton.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 362);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(768, 137);
-            this.dataGridView1.TabIndex = 14;
-            // 
-            // ProductoPictureBox
-            // 
-            this.ProductoPictureBox.Location = new System.Drawing.Point(432, 48);
-            this.ProductoPictureBox.Name = "ProductoPictureBox";
-            this.ProductoPictureBox.Size = new System.Drawing.Size(248, 167);
-            this.ProductoPictureBox.TabIndex = 12;
-            this.ProductoPictureBox.TabStop = false;
+            this.ImagenPictureBox.Location = new System.Drawing.Point(432, 48);
+            this.ImagenPictureBox.Name = "ImagenPictureBox";
+            this.ImagenPictureBox.Size = new System.Drawing.Size(248, 167);
+            this.ImagenPictureBox.TabIndex = 12;
+            this.ImagenPictureBox.TabStop = false;
             // 
             // CancelarButton
             // 
@@ -237,11 +218,9 @@ namespace ProyectoFinal_Grupo2.Vista
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.ModificarButton);
             this.Controls.Add(this.NuevoButton);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.BuscarButton);
-            this.Controls.Add(this.ProductoPictureBox);
-            this.Controls.Add(this.TipoProductoComboBox);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.ProductosDataGridView);
+            this.Controls.Add(this.ImagenButton);
+            this.Controls.Add(this.ImagenPictureBox);
             this.Controls.Add(this.PrecioTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ExistenciaTextBox);
@@ -250,20 +229,18 @@ namespace ProyectoFinal_Grupo2.Vista
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CodigoProductoTextBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.IsTextBox);
+            this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.label1);
             this.Name = "ProductoView";
             this.Text = "Productos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox IsTextBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Button CancelarButton;
         public System.Windows.Forms.Button EliminarButton;
         public System.Windows.Forms.Button GuardarButton;
@@ -278,9 +255,9 @@ namespace ProyectoFinal_Grupo2.Vista
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox PrecioTextBox;
         public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.Label label6;
-        public System.Windows.Forms.ComboBox TipoProductoComboBox;
-        public System.Windows.Forms.PictureBox ProductoPictureBox;
-        public System.Windows.Forms.Button BuscarButton;
+        public System.Windows.Forms.PictureBox ImagenPictureBox;
+        public System.Windows.Forms.Button ImagenButton;
+        public System.Windows.Forms.DataGridView ProductosDataGridView;
+        public System.Windows.Forms.TextBox IdTextBox;
     }
 }
