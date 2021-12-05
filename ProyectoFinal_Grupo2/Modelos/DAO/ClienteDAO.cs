@@ -231,13 +231,7 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
             {
             }
             return dt;
-        }
-
-        
-
-        
-
-            
+        }       
 
     }
 }
