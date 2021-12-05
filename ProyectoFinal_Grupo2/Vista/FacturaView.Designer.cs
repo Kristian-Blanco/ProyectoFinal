@@ -431,12 +431,10 @@ namespace ProyectoFinal_Grupo2.Vista
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label5;
-=======
-        private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
->>>>>>> 3317fd36471ab14a60d0d188a0ed00687403e03e
+
+        //private System.Windows.Forms.ImageList imageList1;
+        //private System.Windows.Forms.Label label3;
+        //private System.Windows.Forms.Label label4;
+
     }
 }

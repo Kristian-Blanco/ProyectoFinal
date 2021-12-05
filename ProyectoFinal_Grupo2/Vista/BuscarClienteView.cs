@@ -36,7 +36,7 @@ namespace ProyectoFinal_Grupo2.Vista
             {
                 if (ClientedataGridView.SelectedRows.Count > 0)
                 {
-                    _cliente.IdCliente = (int)ClientedataGridView.CurrentRow.Cells["ID"].Value;
+                    _cliente.IdCliente = (int)ClientedataGridView.CurrentRow.Cells["IDCLIENTE"].Value;
                     _cliente.Identidad = ClientedataGridView.CurrentRow.Cells["IDENTIDAD"].Value.ToString();
                     _cliente.Nombre = ClientedataGridView.CurrentRow.Cells["NOMBRE"].Value.ToString();
                     this.Close();
