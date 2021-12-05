@@ -51,7 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controladores\BuscarClienteView.cs" />
     <Compile Include="Controladores\ClienteController.cs" />
     <Compile Include="Controladores\FacturaController.cs" />
     <Compile Include="Controladores\LoginController.cs" />

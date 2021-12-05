@@ -55,9 +55,9 @@
             // 
             // Aceptarbutton
             // 
-            this.Aceptarbutton.Location = new System.Drawing.Point(111, 152);
+            this.Aceptarbutton.Location = new System.Drawing.Point(199, 138);
             this.Aceptarbutton.Name = "Aceptarbutton";
-            this.Aceptarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Aceptarbutton.Size = new System.Drawing.Size(75, 37);
             this.Aceptarbutton.TabIndex = 2;
             this.Aceptarbutton.Text = "Aceptar";
             this.Aceptarbutton.UseVisualStyleBackColor = true;
@@ -65,9 +65,9 @@
             // 
             // Cancelarbutton
             // 
-            this.Cancelarbutton.Location = new System.Drawing.Point(266, 152);
+            this.Cancelarbutton.Location = new System.Drawing.Point(363, 138);
             this.Cancelarbutton.Name = "Cancelarbutton";
-            this.Cancelarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Cancelarbutton.Size = new System.Drawing.Size(75, 37);
             this.Cancelarbutton.TabIndex = 3;
             this.Cancelarbutton.Text = "Cancelar";
             this.Cancelarbutton.UseVisualStyleBackColor = true;

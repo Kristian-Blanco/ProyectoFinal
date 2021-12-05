@@ -37,7 +37,7 @@ namespace ProyectoFinal_Grupo2.Controladores
             vista.Load += new EventHandler(Load);
             vista.IdentidadmaskedTextBox.KeyPress += IdentidadMaskedTextBox_KeyPress;
             vista.BuscarClienteButton.Click += BuscarClienteButton_Click;
-            vista.NombreTextBox.Text = cliente.Nombre;
+            //vista.NombreTextBox.Text = cliente.Nombre;
             vista.CodigoProductoTextBox.KeyPress += CodigoProductoTexBox_KeyPress;
             vista.CantidadTextBox.KeyPress += CantidadTextBox_KeyPress;
             vista.Guardarbutton.Click += GuardarButton_Click;
@@ -134,6 +134,8 @@ namespace ProyectoFinal_Grupo2.Controladores
             BuscarClienteView form = new BuscarClienteView();
             form.ShowDialog();
             cliente = form._cliente;
+            vista.IdentidadmaskedTextBox.Text = cliente.Identidad;
+            vista.NombreTextBox.Text = cliente.Nombre;
         }
         private void Load(object sender, EventArgs e)
         {

@@ -53,23 +53,13 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
             return inserto;
         }
 
-        internal object GetClientes()
-        {
-            throw new NotImplementedException();
-        }
-
-        internal Cliente GetClientePorIdentidad(object text)
-        {
-            throw new NotImplementedException();
-        }
-
-        public DataTable GetClientesPorNombre(string nombre)
+        public DataTable GetClientes()
         {
             DataTable dt = new DataTable();
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" SELECT * FROM CLIENTE WHERE NOMBRE LIKE (' % " + nombre + "%')");
+                sql.Append("SELECT *  FROM CLIENTE ");
 
                 comando.Connection = MiConexion;
                 MiConexion.Open();
@@ -78,11 +68,13 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
                 SqlDataReader dr = comando.ExecuteReader();
                 dt.Load(dr);
                 MiConexion.Close();
+
             }
             catch (Exception)
             {
             }
             return dt;
+
         }
 
         public bool ActualizarCliente(Cliente cliente)
@@ -143,13 +135,12 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
                 MiConexion.Close();
 
             }
-            catch (Exception )
+            catch (Exception)
             {
                 return modifico;
             }
             return modifico;
         }
-
         public byte[] SeleccionarImagenCliente(int idCliente)
         {
             byte[] _imagen = new byte[0];
@@ -180,6 +171,73 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
             }
             return _imagen;
         }
+        public Cliente GetClientePorIdentidad(string identidad)
+        {
+            Cliente cliente = new Cliente();
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append("SELECT *  FROM CLIENTE ");
+                sql.Append("WHERE IDENTIDAD = @Identidad;");
+
+                comando.Connection = MiConexion;
+                MiConexion.Open(); 
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = sql.ToString();
+                comando.Parameters.Add("@Identidad", SqlDbType.NVarChar, 20).Value = identidad;
+                SqlDataReader dr = comando.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    cliente.IdCliente = (int)dr["IDCLIENTE"];
+                    cliente.Identidad = (string)dr["IDENTIDAD"];
+                    cliente.Nombre = (string)dr["NOMBRE"];
+                    cliente.Email = (string)dr["EMAIL"];
+                    cliente.Direccion = (string)dr["DIRECCION"];
+
+
+                }
+
+                MiConexion.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MiConexion.Close();
+            }
+            return cliente;
+
+
+
+        }
+
+        public DataTable GetClientesPorNombre(string nombre)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append(" SELECT * FROM CLIENTE WHERE NOMBRE LIKE (' % " + nombre + "%')");
+
+                comando.Connection = MiConexion;
+                MiConexion.Open();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = sql.ToString();
+                SqlDataReader dr = comando.ExecuteReader();
+                dt.Load(dr);
+                MiConexion.Close();
+            }
+            catch (Exception)
+            {
+            }
+            return dt;
+        }
+
+        
+
+        
+
+            
 
     }
 }
