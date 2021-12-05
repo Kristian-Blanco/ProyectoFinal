@@ -59,7 +59,12 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
             return dt;
         }
 
-        internal Producto GetClientePorIdentidad(string text)
+        internal bool EliminarUsuario(int v)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal Producto GetProductoPorIdentidad(string text)
         {
             throw new NotImplementedException();
         }
@@ -82,7 +87,7 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
 
                 if (dr.Read())
                 {
-                    producto.IdProducto = (int)dr["ID"];
+                    producto.IdProducto = (int)dr["IDPRODUCTO"];
                     producto.Codigo = (string)dr["CODIGO"];
                     producto.Descripcion = (string)dr["DESCRIPCION"];
                     producto.Existencia = (int)dr["EXISTENCIA"];
@@ -98,5 +103,20 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
             }
             return producto;
         }
-    }  
+
+        internal byte[] SeleccionarImagenProducto(int v)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal bool ActualizarProducto(Producto producto)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal bool InsertarNuevoProducto(Producto producto)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

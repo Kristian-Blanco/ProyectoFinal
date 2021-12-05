@@ -30,7 +30,7 @@ namespace ProyectoFinal_Grupo2.Vista
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.IsTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.CodigoProductoTextBox = new System.Windows.Forms.TextBox();
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
@@ -62,13 +62,13 @@ namespace ProyectoFinal_Grupo2.Vista
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
             // 
-            // textBox1
+            // IsTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(126, 20);
-            this.textBox1.TabIndex = 1;
+            this.IsTextBox.Location = new System.Drawing.Point(127, 38);
+            this.IsTextBox.Name = "IsTextBox";
+            this.IsTextBox.ReadOnly = true;
+            this.IsTextBox.Size = new System.Drawing.Size(126, 20);
+            this.IsTextBox.TabIndex = 1;
             // 
             // label2
             // 
@@ -250,7 +250,7 @@ namespace ProyectoFinal_Grupo2.Vista
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CodigoProductoTextBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.IsTextBox);
             this.Controls.Add(this.label1);
             this.Name = "ProductoView";
             this.Text = "Productos";
@@ -262,26 +262,25 @@ namespace ProyectoFinal_Grupo2.Vista
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox CodigoProductoTextBox;
-        private System.Windows.Forms.TextBox DescripcionTextBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox ExistenciaTextBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox PrecioTextBox;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox TipoProductoComboBox;
-        private System.Windows.Forms.PictureBox ProductoPictureBox;
-        private System.Windows.Forms.Button BuscarButton;
+        private System.Windows.Forms.TextBox IsTextBox;
         private System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Button CancelarButton;
         public System.Windows.Forms.Button EliminarButton;
         public System.Windows.Forms.Button GuardarButton;
         public System.Windows.Forms.Button ModificarButton;
         public System.Windows.Forms.Button NuevoButton;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox CodigoProductoTextBox;
+        public System.Windows.Forms.TextBox DescripcionTextBox;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox ExistenciaTextBox;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox PrecioTextBox;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.ComboBox TipoProductoComboBox;
+        public System.Windows.Forms.PictureBox ProductoPictureBox;
+        public System.Windows.Forms.Button BuscarButton;
     }
 }
