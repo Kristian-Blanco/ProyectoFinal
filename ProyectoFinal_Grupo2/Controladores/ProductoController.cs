@@ -1,7 +1,6 @@
 ﻿using ProyectoFinal_Grupo2.Vista;
 using ProyectoFinal_Grupo2.Modelos.DAO;
 using ProyectoFinal_Grupo2.Modelos.Entidades;
-using ProyectoFinal_Grupo2.Vista;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -16,7 +15,7 @@ namespace ProyectoFinal_Grupo2.Controladores
     public class ProductoController
     {
         ProductoView vista;
-        ProductoDAO productoDAO = new ClienteDAO();
+        ProductoDAO productoDAO = new ProductoDAO();
         Producto producto = new Producto();
         string operacion = string.Empty;
 
@@ -72,18 +71,19 @@ namespace ProyectoFinal_Grupo2.Controladores
 
         private void Modificar(object sender, EventArgs e)
         {
-            if (vista.ClientesDataGridView.SelectedRows.Count > 0)
+            if (vista.ProductosDataGridView.SelectedRows.Count > 0)
             {
                 operacion = "Modificar";
                 HabilitarControles();
 
-                vista.IdTextBox.Text = vista.ClientesDataGridView.CurrentRow.Cells["IDCLIENTE"].Value.ToString();
-                vista.IdentidadMaskedTextBox.Text = vista.ClientesDataGridView.CurrentRow.Cells["IDENTIDAD"].Value.ToString();
-                vista.NombreTextBox.Text = vista.ClientesDataGridView.CurrentRow.Cells["NOMBRE"].Value.ToString();
-                vista.EmailTextBox.Text = vista.ClientesDataGridView.CurrentRow.Cells["EMAIL"].Value.ToString();
-                vista.DireccionTextBox.Text = vista.ClientesDataGridView.CurrentRow.Cells["DIRECCION"].Value.ToString();
+                vista.IdTextBox.Text = vista.ProductosDataGridView.CurrentRow.Cells["IDPRODUCTO"].Value.ToString();
+                vista.CodigoProductoTextBox.Text = vista.ProductosDataGridView.CurrentRow.Cells["CODIGO"].Value.ToString();
+                vista.DescripcionTextBox.Text = vista.ProductosDataGridView.CurrentRow.Cells["DESCRIPCION"].Value.ToString();
+                vista.ExistenciaTextBox.Text = vista.ProductosDataGridView.CurrentRow.Cells["EXISTENCIA"].Value.ToString();
+                vista.PrecioTextBox.Text = vista.ProductosDataGridView.CurrentRow.Cells["PRECIO"].Value.ToString();
 
-                byte[] img = clienteDAO.SeleccionarImagenCliente(Convert.ToInt32(vista.ClientesDataGridView.CurrentRow.Cells["IDCLIENTE"].Value));
+
+                byte[] img = productoDAO.SeleccionarImagenProducto(Convert.ToInt32(vista.ProductosDataGridView.CurrentRow.Cells["IDPRODUCTO"].Value));
 
                 if (img.Length > 0)
                 {
@@ -98,6 +98,7 @@ namespace ProyectoFinal_Grupo2.Controladores
             }
 
         }
+
 
         private void Imagen(object sender, EventArgs e)
         {
@@ -118,75 +119,71 @@ namespace ProyectoFinal_Grupo2.Controladores
 
         private void Guardar(object sender, EventArgs e)
         {
-            if (vista.IdentidadMaskedTextBox.Text == "")
-            {
-                vista.errorProvider1.SetError(vista.IdentidadMaskedTextBox, "Ingrese una identidad");
-                vista.IdentidadMaskedTextBox.Focus();
-                return;
-            }
-            if (vista.NombreTextBox.Text == "")
-            {
-                vista.errorProvider1.SetError(vista.NombreTextBox, "Ingrese un nombre");
-                vista.NombreTextBox.Focus();
-                return;
-            }
-            if (vista.EmailTextBox.Text == "")
-            {
-                vista.errorProvider1.SetError(vista.EmailTextBox, "Ingrese un email");
-                vista.EmailTextBox.Focus();
-                return;
-            }
-            if (vista.DireccionTextBox.Text == "")
-            {
-                vista.errorProvider1.SetError(vista.DireccionTextBox, "Ingrese unu dirección");
-                vista.DireccionTextBox.Focus();
-                return;
-            }
+
+            //if (vista.CodigoProductoTextBox.Text == "")
+            //{
+            //    vista.errorProvider1.SetError(vista.CodigoProductoTextBox, "Ingrese una Codigo");
+            //    vista.CodigoProductoTextBox.Focus();
+            //    return;              
+            //}  
+            //if (vista.DescripcionTextBox.Text == "")
+            //{
+            //    vista.errorProvider1.SetError(vista.DescripcionTextBox, "Ingrese una descripcion");
+            //    vista.DescripcionTextBox.Focus();
+            //    return;               
+            //}
+            //if (vista.PrecioTextBox.Text == "")
+            //{
+            //    vista.errorProvider1.SetError(vista.PrecioTextBox, "Ingrese un precio");
+            //    vista.PrecioTextBox.Focus();
+            //    return;
+            //}
             try
             {
-                cliente.Identidad = vista.IdentidadMaskedTextBox.Text;
-                cliente.Nombre = vista.NombreTextBox.Text;
-                cliente.Email = vista.EmailTextBox.Text;
-                cliente.Direccion = vista.DireccionTextBox.Text;
+                producto.IdProducto = Convert.ToInt32(vista.IdTextBox.Text);
+                producto.Codigo = vista.CodigoProductoTextBox.Text;
+                producto.Descripcion = vista.DescripcionTextBox.Text;
+                producto.Existencia = Convert.ToInt32(vista.ExistenciaTextBox.Text);
+                producto.Precio = Convert.ToDecimal(vista.PrecioTextBox.Text);
 
                 if (vista.ImagenPictureBox.Image != null)
                 {
                     System.IO.MemoryStream ms = new System.IO.MemoryStream();
                     vista.ImagenPictureBox.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    cliente.Foto = ms.GetBuffer();
+                    producto.Foto = ms.GetBuffer();
                 }
 
 
                 if (operacion == "Nuevo")
                 {
-                    bool inserto = clienteDAO.InsertarNuevoCliente(cliente);
+                    bool inserto = productoDAO.InsertarNuevoProducto(producto);
                     if (inserto)
                     {
                         DesabilitarControles();
                         LimpiarControles();
-                        MessageBox.Show("Cliente creado exitosamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Producto agregado exitosamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ListarProductos();
                     }
                     else
                     {
-                        MessageBox.Show("Cliente no se pudo insertar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("El producto no se pudo insertar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else if (operacion == "Modificar")
                 {
-                    cliente.IdCliente = Convert.ToInt32(vista.IdTextBox.Text);
-                    bool modifico = clienteDAO.ActualizarCliente(cliente);
+                    producto.IdProducto = Convert.ToInt32(vista.IdTextBox.Text);
+                    bool modifico = productoDAO.ActualizarProducto(producto);
                     if (modifico)
                     {
                         DesabilitarControles();
                         LimpiarControles();
-                        MessageBox.Show("Cliente modificado exitosamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Producto modificado exitosamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ListarProductos();
 
                     }
                     else
                     {
-                        MessageBox.Show("Cliente no se pudo modificar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("El producto no se pudo modificar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
@@ -198,10 +195,10 @@ namespace ProyectoFinal_Grupo2.Controladores
         }
         private void HabilitarControles()
         {
-            vista.IdentidadMaskedTextBox.Enabled = true;
-            vista.NombreTextBox.Enabled = true;
-            vista.DireccionTextBox.Enabled = true;
-            vista.EmailTextBox.Enabled = true;
+            vista.CodigoProductoTextBox.Enabled = true;
+            vista.DescripcionTextBox.Enabled = true;
+            vista.ExistenciaTextBox.Enabled = true;
+            vista.PrecioTextBox.Enabled = true;
 
             vista.GuardarButton.Enabled = true;
             vista.CancelarButton.Enabled = true;
@@ -212,10 +209,10 @@ namespace ProyectoFinal_Grupo2.Controladores
 
         private void DesabilitarControles()
         {
-            vista.IdentidadMaskedTextBox.Enabled = false;
-            vista.NombreTextBox.Enabled = false;
-            vista.DireccionTextBox.Enabled = false;
-            vista.EmailTextBox.Enabled = false;
+            vista.CodigoProductoTextBox.Enabled = false;
+            vista.DescripcionTextBox.Enabled = false;
+            vista.ExistenciaTextBox.Enabled = false;
+            vista.PrecioTextBox.Enabled = false;
 
             vista.GuardarButton.Enabled = false;
             vista.CancelarButton.Enabled = false;
@@ -228,10 +225,10 @@ namespace ProyectoFinal_Grupo2.Controladores
         private void LimpiarControles()
         {
             vista.IdTextBox.Clear();
-            vista.IdentidadMaskedTextBox.Clear();
-            vista.NombreTextBox.Clear();
-            vista.DireccionTextBox.Clear();
-            vista.EmailTextBox.Clear();
+            vista.CodigoProductoTextBox.Clear();
+            vista.DescripcionTextBox.Clear();
+            vista.ExistenciaTextBox.Clear();
+            vista.PrecioTextBox.Clear();
             vista.ImagenPictureBox.Image = null;
         }
 
