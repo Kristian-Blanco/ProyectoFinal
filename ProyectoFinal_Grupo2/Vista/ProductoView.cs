@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinal_Grupo2.Controladores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace ProyectoFinal_Grupo2.Vista
 {
     public partial class ProductoView : Form
     {
+        internal object errorProvider1;
+
         public ProductoView()
         {
             InitializeComponent();
+            ProductoController controlador = new ProductoController(this);
         }
     }
 }

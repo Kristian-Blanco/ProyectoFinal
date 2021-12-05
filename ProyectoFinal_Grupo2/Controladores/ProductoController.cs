@@ -137,7 +137,9 @@ namespace ProyectoFinal_Grupo2.Controladores
             //    vista.errorProvider1.SetError(vista.PrecioTextBox, "Ingrese un precio");
             //    vista.PrecioTextBox.Focus();
             //    return;
-            //}
+            //} 
+
+            
             try
             {
                 producto.IdProducto = Convert.ToInt32(vista.IdTextBox.Text);
