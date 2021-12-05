@@ -13,8 +13,6 @@ namespace ProyectoFinal_Grupo2.Vista
 {
     public partial class ProductoView : Form
     {
-        internal object errorProvider1;
-
         public ProductoView()
         {
             InitializeComponent();
