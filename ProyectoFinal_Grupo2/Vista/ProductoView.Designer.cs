@@ -153,11 +153,11 @@ namespace ProyectoFinal_Grupo2.Vista
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Location = new System.Drawing.Point(554, 235);
+            this.BuscarButton.Location = new System.Drawing.Point(578, 227);
             this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(126, 49);
+            this.BuscarButton.Size = new System.Drawing.Size(102, 35);
             this.BuscarButton.TabIndex = 13;
-            this.BuscarButton.Text = "Buscar Imagen";
+            this.BuscarButton.Text = "Buscar Imagen...";
             this.BuscarButton.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
@@ -230,6 +230,7 @@ namespace ProyectoFinal_Grupo2.Vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(766, 494);
             this.Controls.Add(this.CancelarButton);
             this.Controls.Add(this.EliminarButton);
