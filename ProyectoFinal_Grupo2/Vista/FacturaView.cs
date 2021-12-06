@@ -21,6 +21,7 @@ namespace ProyectoFinal_Grupo2.Vista
             FacturaController controlador = new FacturaController(this);
         }
         public string EmailUsuario;
-        
+
+       
     }
 }

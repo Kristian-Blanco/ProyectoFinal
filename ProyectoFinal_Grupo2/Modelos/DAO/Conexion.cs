@@ -12,5 +12,7 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
     {
         protected SqlConnection MiConexion = new SqlConnection(ConfigurationManager.ConnectionStrings["ProyectoConexion"].ConnectionString);
 
+        
+
     }
 }

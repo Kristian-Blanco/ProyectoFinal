@@ -14,7 +14,7 @@ namespace ProyectoFinal_Grupo2.Controladores
     public class FacturaController
     {
         FacturaView vista;
-        Factura_DAO factura_DAO = new Factura_DAO();
+        FacturaDAO factura_DAO = new FacturaDAO();
         Factura factura = new Factura();
         UsuarioDAO usuarioDAO = new UsuarioDAO();
         Cliente cliente = new Cliente();
@@ -40,7 +40,7 @@ namespace ProyectoFinal_Grupo2.Controladores
             //vista.NombreTextBox.Text = cliente.Nombre;
             vista.CodigoProductoTextBox.KeyPress += CodigoProductoTexBox_KeyPress;
             vista.CantidadTextBox.KeyPress += CantidadTextBox_KeyPress;
-            vista.Guardarbutton.Click += GuardarButton_Click;
+            vista.GuardarButton.Click += GuardarButton_Click;
 
 
 

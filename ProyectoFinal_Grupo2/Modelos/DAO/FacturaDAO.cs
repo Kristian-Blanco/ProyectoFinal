@@ -9,14 +9,12 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal_Grupo2.Modelos.DAO
 {
-     public class Factura_DAO : Conexion
+   public class FacturaDAO : Conexion
     {
         SqlCommand comando = new SqlCommand();
         SqlCommand comando2 = new SqlCommand();
 
-        
-
-        public bool InsertarNuevaFactura(Factura factura, List<DetalleFacturaDAO> detalleFactura)
+        public bool InsertarNuevaFactura(Factura factura, List<DetalleFactura> detalleFactura)
         {
             bool inserto = false;
             MiConexion.Close();
@@ -36,7 +34,6 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
                 sqlD.Append(" INSERT INTO DETALLEFACTURA ");
                 sqlD.Append(" VALUES (@IdFactura, @IdProducto, @Cantidad, @Precio, @TotalDetalle); ");
 
-
                 comando.Transaction = transaction;
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = sql.ToString();
@@ -50,7 +47,7 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
 
                 int IdFactura = Convert.ToInt32(comando.ExecuteScalar());
 
-                foreach (var item in detalleFactura) 
+                foreach (var item in detalleFactura)
                 {
                     comando.Transaction = transaction;
                     comando.CommandType = System.Data.CommandType.Text;
@@ -71,11 +68,6 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
                 transaction.Rollback();
             }
             return inserto;
-        }
-
-        internal bool InsertarNuevaFactura(Factura factura, List<DetalleFactura> listadetalleFactura)
-        {
-            throw new NotImplementedException();
         }
     }
 }
