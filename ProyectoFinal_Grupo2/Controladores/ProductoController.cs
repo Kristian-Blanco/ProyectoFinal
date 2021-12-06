@@ -44,7 +44,7 @@ namespace ProyectoFinal_Grupo2.Controladores
         {
             if (vista.ProductosDataGridView.SelectedRows.Count > 0)
             {
-                bool elimino = productoDAO.EliminarUsuario(Convert.ToInt32(vista.ProductosDataGridView.CurrentRow.Cells["IDPRODUCTO"].Value));
+                bool elimino = productoDAO.EliminarProducto(Convert.ToInt32(vista.ProductosDataGridView.CurrentRow.Cells["IDPRODUCTO"].Value));
                 if (elimino)
                 {
                     MessageBox.Show("Producto eliminado exitosamente", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -76,7 +76,7 @@ namespace ProyectoFinal_Grupo2.Controladores
                 operacion = "Modificar";
                 HabilitarControles();
 
-                vista.IdTextBox.Text = vista.ProductosDataGridView.CurrentRow.Cells["IDPRODUCTO"].Value.ToString();
+                //vista.IdTextBox.Text = vista.ProductosDataGridView.CurrentRow.Cells["IDPRODUCTO"].Value.ToString();
                 vista.CodigoProductoTextBox.Text = vista.ProductosDataGridView.CurrentRow.Cells["CODIGO"].Value.ToString();
                 vista.DescripcionTextBox.Text = vista.ProductosDataGridView.CurrentRow.Cells["DESCRIPCION"].Value.ToString();
                 vista.ExistenciaTextBox.Text = vista.ProductosDataGridView.CurrentRow.Cells["EXISTENCIA"].Value.ToString();
@@ -142,12 +142,12 @@ namespace ProyectoFinal_Grupo2.Controladores
             
             try
             {
-                //producto.IdProducto = Convert.ToInt32(vista.IdTextBox.Text);
+                producto.IdProducto = Convert.ToInt32(vista.IdTextBox.Text);
                 producto.Codigo = vista.CodigoProductoTextBox.Text;
                 producto.Descripcion = vista.DescripcionTextBox.Text;
                 producto.Existencia = Convert.ToInt32(vista.ExistenciaTextBox.Text);
                 producto.Precio = Convert.ToDecimal(vista.PrecioTextBox.Text);
-
+                
                 if (vista.ImagenPictureBox.Image != null)
                 {
                     System.IO.MemoryStream ms = new System.IO.MemoryStream();

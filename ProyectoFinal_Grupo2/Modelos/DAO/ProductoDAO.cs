@@ -55,9 +55,30 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
             return inserto;
         }
 
-        internal bool EliminarUsuario(int v)
+        public bool EliminarProducto(int idProducto)
         {
-            throw new NotImplementedException();
+            bool modifico = false;
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append(" DELETE FROM PRODUCTO ");
+                sql.Append(" WHERE IDPRODUCTO = @IdProducto; ");
+
+                comando.Connection = MiConexion;
+                MiConexion.Open();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = sql.ToString();
+                comando.Parameters.Add("@IdProducto", SqlDbType.Int).Value = idProducto;
+                comando.ExecuteNonQuery();
+                modifico = true;
+                MiConexion.Close();
+
+            }
+            catch (Exception)
+            {
+                return modifico;
+            }
+            return modifico;
         }
 
         public DataTable GetProductos()
