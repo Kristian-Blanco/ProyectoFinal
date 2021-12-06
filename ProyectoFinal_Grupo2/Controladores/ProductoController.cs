@@ -142,7 +142,7 @@ namespace ProyectoFinal_Grupo2.Controladores
             
             try
             {
-                producto.IdProducto = Convert.ToInt32(vista.IdTextBox.Text);
+                //producto.IdProducto = Convert.ToInt32(vista.IdTextBox.Text);
                 producto.Codigo = vista.CodigoProductoTextBox.Text;
                 producto.Descripcion = vista.DescripcionTextBox.Text;
                 producto.Existencia = Convert.ToInt32(vista.ExistenciaTextBox.Text);
