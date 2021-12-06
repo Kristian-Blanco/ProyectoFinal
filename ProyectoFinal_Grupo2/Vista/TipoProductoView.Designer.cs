@@ -154,7 +154,7 @@ namespace ProyectoFinal_Grupo2.Vista
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "TipoProductoView";
-            this.Text = "Tipo de Productos";
+            this.Text = "       ";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

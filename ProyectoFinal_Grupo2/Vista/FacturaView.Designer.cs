@@ -222,6 +222,7 @@ namespace ProyectoFinal_Grupo2.Vista
             this.Cancelarbutton.TabIndex = 5;
             this.Cancelarbutton.Text = "Cancelar";
             this.Cancelarbutton.UseVisualStyleBackColor = true;
+           
             // 
             // groupBox4
             // 

@@ -23,5 +23,6 @@ namespace ProyectoFinal_Grupo2.Vista
         public string EmailUsuario;
 
        
+        
     }
 }

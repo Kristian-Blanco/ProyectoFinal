@@ -14,6 +14,8 @@ namespace ProyectoFinal_Grupo2.Modelos.Entidades
         public int Existencia { get; set; }
         public decimal Precio { get; set; }
         public byte[] Foto { get; set; }
-      
+
+       public int IdTipoProducto { get; set; }
+
     }
 }
