@@ -55,6 +55,11 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
             return inserto;
         }
 
+        internal bool EliminarUsuario(int v)
+        {
+            throw new NotImplementedException();
+        }
+
         public DataTable GetProductos()
         {
             DataTable dt = new DataTable();
@@ -170,20 +175,7 @@ namespace ProyectoFinal_Grupo2.Modelos.DAO
 
             }
             return _imagen;
-        }
-
-
-  
-
-
-
-
-        internal bool EliminarUsuario(int v)
-        {
-            throw new NotImplementedException();
-        }
-
-    
+        }    
 
         public Producto GetProductoPorCodigo(string codigo)
         {
